@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Game</title>
     <link rel="stylesheet" href="game.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
     <script src="game.js" defer></script>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
 </head>
 <body>
     <div id="home" class="section active">
@@ -17,14 +23,18 @@
 
     <div id="game" class="section">
         <h1>Welkom bij het Spel</h1>
-        <p>Dit is de nieuwe pagina-inhoud voor je game.</p>
-        <div class="rectangle" onclick="showHome()">hoofdmenu</div>
+        <p>Hier is je 3D-model:</p>
+        <div id="3d-canvas"></div>
+        <div class="rectangle" onclick="showHome()">Terug naar Home</div>
     </div>
 
     <div id="settings" class="section">
         <h1>Instellingen</h1>
-        <p>Hier kun je je game-instellingen aanpassen.</p>
-        <div class="rectangle" onclick="showHome()">hoofdmenu</div>
+        <p>Pas het geluidsvolume aan:</p>
+        <label for="volume-slider">Volume:</label>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" onchange="setVolume(this.value)">
+        <p id="volume-value">Volume: 50%</p>
+        <div class="rectangle" onclick="showHome()">Terug naar Home</div>
     </div>
 </body>
 </html>

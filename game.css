@@ -16,7 +16,7 @@ body, html {
 .rectangle {
     width: 200px;
     height: 50px;
-    background-color: #000000;
+    background-color: #3498db;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,11 +28,11 @@ body, html {
 }
 
 .play {
-    background-color: #0d0d0d;
+    background-color: #2ecc71;
 }
 
 .play:hover {
-    background-color: #ae2727;
+    background-color: #27ae60;
 }
 
 .settings {
