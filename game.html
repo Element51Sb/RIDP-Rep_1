@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div id="home" class="section active">
+        <div class="button-container">
+            <div class="rectangle play" onclick="showGame()">Play</div>
+            <div class="rectangle settings" onclick="showSettings()">Settings</div>
+        </div>
+    </div>
+
+    <div id="game" class="section">
+        <h1>Welkom bij het Spel</h1>
+        <p>Dit is de nieuwe pagina-inhoud voor je game.</p>
+        <div class="rectangle" onclick="showHome()">hoofdmenu</div>
+    </div>
+
+    <div id="settings" class="section">
+        <h1>Instellingen</h1>
+        <p>Hier kun je je game-instellingen aanpassen.</p>
+        <div class="rectangle" onclick="showHome()">hoofdmenu</div>
+    </div>
+</body>
+</html>
